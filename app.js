@@ -3,7 +3,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 const express = require('express')
 const app = express()
-const methodOverride = require('method-override')
 const path = require('path')
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
@@ -14,7 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "client", "build")));
-app.use(methodOverride('_method'))
 app.use(express.urlencoded({ limit: '10mb', extended: false }))
 dbConnect()
 app.use('/', indexRouter)
