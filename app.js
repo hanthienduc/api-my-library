@@ -17,9 +17,9 @@ app.use('/', indexRouter)
 app.use('/authors', authorRouter)
 app.use('/books', bookRouter)
 
-const port = process.env.PORT || 5000
-app.listen(port, function () {
-    console.log(`server run on ${port}`)
-})
+// const port = process.env.PORT || 5000
+// app.listen(port, function () {
+//     console.log(`server run on ${port}`)
+// })
 
 module.exports = app
