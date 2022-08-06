@@ -69,7 +69,7 @@ router.get('/:id', async (req, res) => {
 
 
 // Edit Book Route
-router.put('/:id', async (req, res) => {
+router.put('/update/:id', async (req, res) => {
     let book
 
     try {
