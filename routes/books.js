@@ -94,6 +94,7 @@ router.put('/update/:id', async (req, res) => {
     }
 })
 
+// delete book route 
 router.delete('/delete/:id', async (req, res) => {
     let book
     try {
