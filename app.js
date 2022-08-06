@@ -9,7 +9,6 @@ const authorRouter = require('./routes/authors')
 const bookRouter = require('./routes/books')
 const dbConnect = require('./dbConnect')
 const cors = require("cors");
-app.use(cors());
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ limit: '10mb', extended: false }))
