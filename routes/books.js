@@ -99,7 +99,7 @@ router.delete('/delete/:id', async (req, res) => {
     try {
         book = await Book.findById(req.params.id)
         await book.remove()
-        res.redirect('/books')
+        res.json({ bookId: book._id })
     } catch {
         if (book != null) {
             res.json({ book: book, errorMessage: 'could not remove book' })
